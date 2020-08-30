@@ -1,0 +1,11 @@
+G:\[4] 寫程式 Living\AutoSHIRenamer\AutoSHIRenamer\bin\Release\AutoSHIRenamer.exe.config
+G:\[4] 寫程式 Living\AutoSHIRenamer\AutoSHIRenamer\bin\Release\AutoSHIRenamer.exe
+G:\[4] 寫程式 Living\AutoSHIRenamer\AutoSHIRenamer\bin\Release\AutoSHIRenamer.pdb
+G:\[4] 寫程式 Living\AutoSHIRenamer\AutoSHIRenamer\bin\Release\AutoSHIRenamer.xml
+G:\[4] 寫程式 Living\AutoSHIRenamer\AutoSHIRenamer\obj\Release\AutoSHIRenamer.Form1.resources
+G:\[4] 寫程式 Living\AutoSHIRenamer\AutoSHIRenamer\obj\Release\AutoSHIRenamer.Resources.resources
+G:\[4] 寫程式 Living\AutoSHIRenamer\AutoSHIRenamer\obj\Release\AutoSHIRenamer.vbproj.GenerateResource.Cache
+G:\[4] 寫程式 Living\AutoSHIRenamer\AutoSHIRenamer\obj\Release\AutoSHIRenamer.vbproj.CoreCompileInputs.cache
+G:\[4] 寫程式 Living\AutoSHIRenamer\AutoSHIRenamer\obj\Release\AutoSHIRenamer.exe
+G:\[4] 寫程式 Living\AutoSHIRenamer\AutoSHIRenamer\obj\Release\AutoSHIRenamer.xml
+G:\[4] 寫程式 Living\AutoSHIRenamer\AutoSHIRenamer\obj\Release\AutoSHIRenamer.pdb
