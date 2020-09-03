@@ -82,7 +82,7 @@ Public Class Form1
             Exit Sub
         End Try
 
-        Dim IDX1, IDX2, IDX3, IDX4, IDX5 As Integer
+        Dim IDX1, IDX2, IDX3, IDX4, IDX5, IDX6 As Integer
 
         Dim FileTypeS() As String = {"jpg", "jpeg", "png", "webp", "gif", "php"}
         Dim FileTypeMany As Integer = FileTypeS.Count - 1
@@ -109,42 +109,56 @@ Public Class Form1
 
         For IDX1 = 0 To IDX2
 
-            For IDX5 = 0 To FileTypeMany
+            If FULLstrArray(IDX1).Length = FULLstrArrayOrg(IDX1).Length Then
 
-                FileTypeUp = FileTypeS(IDX5).ToUpper
-                IDX3 = InStrRev(FULLstrArray(IDX1), "." + FileTypeUp)
+                For IDX5 = 0 To FileTypeMany
 
-                If IDX3 > 0 Then
+                    FileTypeUp = FileTypeS(IDX5).ToUpper
+                    IDX3 = InStrRev(FULLstrArray(IDX1), "." + FileTypeUp)
 
-                    IDX4 = InStrRev(FULLstrArray(IDX1), "/", IDX3)
-                    FileTmp1 = FULLstrArrayOrg(IDX1).Substring(IDX4, IDX3 - IDX4)
-                    If IDX4 > 0 Then GetBackOne = FULLstrArrayOrg(IDX1).Substring(IDX4 - 1, 1)
-                    FileTypeLastUse = FileTypeS(IDX5)
-                    CountFormat = String.Format(FileTypeUp + PreFixStr + "_FILE{0:d5}", FileTypeSCount(IDX5))
+                    If IDX3 > 0 Then
 
-                    Try
+                        IDX4 = InStrRev(FULLstrArray(IDX1), "/", IDX3)
+                        FileTmp1 = FULLstrArrayOrg(IDX1).Substring(IDX4, IDX3 - IDX4)
+                        If IDX4 > 0 Then GetBackOne = FULLstrArrayOrg(IDX1).Substring(IDX4 - 1, 1)
+                        FileTypeLastUse = FileTypeS(IDX5)
+                        CountFormat = String.Format(FileTypeUp + PreFixStr + "_FILE{0:d5}", FileTypeSCount(IDX5))
+
+                        Try
 
 
-                        If InStr(FULLstrArray(IDX1), "HTTP://") = 0 And InStr(FULLstrArray(IDX1), "HTTPS://") = 0 Then
-                            FULLstrArrayOrg(IDX1) = Replace(FULLstrArrayOrg(IDX1), GetBackOne + FileTmp1 + FileTypeLastUse, GetBackOne + CountFormat + "." + FileTypeLastUse)
-                        End If
+                            If My.Computer.FileSystem.FileExists(ThePath + FileTmp1 + FileTypeLastUse) Then
 
-                        If My.Computer.FileSystem.FileExists(ThePath + FileTmp1 + FileTypeLastUse) Then
-                            My.Computer.FileSystem.RenameFile(ThePath + FileTmp1 + FileTypeLastUse, CountFormat + "." + FileTypeLastUse)
-                            FULLstrOrg = Replace(FULLstrOrg, GetBackOne + FileTmp1 + FileTypeLastUse, GetBackOne + CountFormat + "." + FileTypeLastUse)
-                            FileTypeSCount(IDX5) += 1
+                                My.Computer.FileSystem.RenameFile(ThePath + FileTmp1 + FileTypeLastUse, CountFormat + "." + FileTypeLastUse)
+                                FULLstrOrg = Replace(FULLstrOrg, GetBackOne + FileTmp1 + FileTypeLastUse, GetBackOne + CountFormat + "." + FileTypeLastUse)
+                                FileTypeSCount(IDX5) += 1
+
+                                For IDX6 = IDX1 To IDX2
+
+                                    If InStr(FULLstrArrayOrg(IDX6), FileTmp1 + FileTypeLastUse) > 0 Then
+                                        If InStr(FULLstrArray(IDX6), "HTTP://") = 0 And InStr(FULLstrArray(IDX6), "HTTPS://") = 0 Then
+                                            FULLstrArrayOrg(IDX6) = Replace(FULLstrArrayOrg(IDX6), GetBackOne + FileTmp1 + FileTypeLastUse, GetBackOne + CountFormat + "." + FileTypeLastUse)
+                                        End If
+                                    End If
+                                Next
+
+                                Exit For
+                            End If
+
+                        Catch ex As Exception
+
+                            If (MsgBox("Error: " + ex.Message, MsgBoxStyle.OkCancel, "Error") = MsgBoxResult.Cancel) Then
+                                Exit Sub
+                            End If
                             Exit For
-                        End If
 
-                    Catch ex As Exception
-                        If (MsgBox("Error: " + ex.Message, MsgBoxStyle.OkCancel, "Error") = MsgBoxResult.Cancel) Then
-                            Exit Sub
-                        End If
-                        Exit For
-                    End Try
+                        End Try
 
-                End If
-            Next
+                    End If
+
+                Next
+
+            End If
 
         Next
 
