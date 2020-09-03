@@ -124,10 +124,15 @@ Public Class Form1
 
                     Try
 
+
+                        If InStr(FULLstrArray(IDX1), "HTTP://") = 0 And InStr(FULLstrArray(IDX1), "HTTPS://") = 0 Then
+                            FULLstrArrayOrg(IDX1) = Replace(FULLstrArrayOrg(IDX1), GetBackOne + FileTmp1 + FileTypeLastUse, GetBackOne + CountFormat + "." + FileTypeLastUse)
+                        End If
+
                         If My.Computer.FileSystem.FileExists(ThePath + FileTmp1 + FileTypeLastUse) Then
                             My.Computer.FileSystem.RenameFile(ThePath + FileTmp1 + FileTypeLastUse, CountFormat + "." + FileTypeLastUse)
-                            FileTypeSCount(IDX5) += 1
                             FULLstrOrg = Replace(FULLstrOrg, GetBackOne + FileTmp1 + FileTypeLastUse, GetBackOne + CountFormat + "." + FileTypeLastUse)
+                            FileTypeSCount(IDX5) += 1
                             Exit For
                         End If
 
@@ -146,7 +151,9 @@ Public Class Form1
 
         If FixHtml Then
             Dim FH1 As IO.StreamWriter = My.Computer.FileSystem.OpenTextFileWriter(TheHtmlFile, False)
-            FH1.Write(FULLstrOrg)
+            For Each WriteStr As String In FULLstrArrayOrg
+                FH1.Write(WriteStr + " ")
+            Next
             FH1.Close()
         End If
 
