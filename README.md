@@ -1,4 +1,4 @@
-# AutoSHIRenamer 網頁存檔圖片自動更名器
+# AutoSHIRenamer 網頁存檔圖片自動更名器 (Saved web images auto rename tool.)
 
 ＜中文＞
 -------
@@ -21,7 +21,7 @@ By Overdoingism - 做過頭主義。
 
 ＜４＞本程式設計者不對使用本程式之任何結果負責。
 
-
+-------
 
 
 ＜English＞
