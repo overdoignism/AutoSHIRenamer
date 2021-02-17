@@ -24,8 +24,8 @@ By Overdoingism - 做過頭主義。
 
 
 
-<English>
----------
+＜English＞
+-----------
 When you saved a web to storage by right-click, sometimes the filename of image is random. It can fix it. Jusy drop the saved html file and press GO.
 
 Format: JPG/JPEG,PNG,GIF,WEBP,PHP
