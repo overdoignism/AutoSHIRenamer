@@ -1,7 +1,8 @@
 # AutoSHIRenamer 網頁存檔圖片自動更名器
 
-你是否有這樣的經驗呢？將一個網站頁面按右鍵選存檔，結果雖然網站被存下來了，但內部儲存的圖檔名稱卻完全沒有一個順序規則，若日後要按照網頁顯示的順序開啟，只能將存檔網頁開啟，不能直接存取圖片。
-這個程式就是為了解決這個狀況而設計的。使用方法是將存檔的html檔拖入文字方塊內，按下GO，其對應網頁存檔的檔案夾內，圖檔就會依照顯示順序排序更名。
+＜中文＞
+-------
+你是否有這樣的經驗呢？將一個網站頁面按右鍵選存檔，結果雖然網站被存下來了，但內部儲存的圖檔名稱卻完全沒有一個順序規則，若日後要按照網頁顯示的順序開啟，只能將存檔網頁開啟，不能直接存取圖片。這個程式就是為了解決這個狀況而設計的。使用方法是將存檔的html檔拖入文字方塊內，按下GO，其對應網頁存檔的檔案夾內，圖檔就會依照顯示順序排序更名。
 
 對應檔案格式：JPG/JPEG，PNG，GIF，WEBP，PHP，若有其他需求請自己修改原始碼。
 
@@ -21,6 +22,10 @@ By Overdoingism - 做過頭主義。
 ＜４＞本程式設計者不對使用本程式之任何結果負責。
 
 
+
+
+<English>
+---------
 When you saved a web to storage by right-click, sometimes the filename of image is random. It can fix it. Jusy drop the saved html file and press GO.
 
 Format: JPG/JPEG,PNG,GIF,WEBP,PHP
