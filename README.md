@@ -19,3 +19,22 @@ By Overdoingism - 做過頭主義。
 ＜３＞網站設計技巧日新月異，本程式非萬能，仍可能有無效的場合；若瀏覽器即無正確存檔，亦更不可能修復，請注意。
 
 ＜４＞本程式設計者不對使用本程式之任何結果負責。
+
+
+When you saved a web to storage by right-click, sometimes the filename of image is random. It can fix it. Jusy drop the saved html file and press GO.
+
+Format: JPG/JPEG,PNG,GIF,WEBP,PHP
+
+** Infomation **
+
+Developed by Visual Studio.NET , overdoingism Lab.  Use MIT License.
+
+** Attention **
+
+<1> For safety, Backup first. It's no undo.
+
+<2> If there are six-digi filename files, it's come from sub html. The saved of Firefox is in sub-directory, not process now. 
+
+<3> The program is not all-powerful.
+
+<4> Author HAS NO ANY RESPONSIBILITY AND WARRANTY for your using.
