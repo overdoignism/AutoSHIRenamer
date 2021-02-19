@@ -42,4 +42,4 @@ Developed by Visual Studio.NET , overdoingism Lab.  Use MIT License.
 
 <3> The program is not all-powerful.
 
-<4> Author HAS NO ANY RESPONSIBILITY AND WARRANTY for your using.
+<4> Author HAS NO ANY RESPONSIBILITY AND WARRANTY for your using result.
