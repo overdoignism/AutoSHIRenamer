@@ -32,7 +32,14 @@ Public Class Form1
 
         Dim ManyHTMLstr As String
         Dim GetThePatch As String = Replace(My.Computer.FileSystem.GetFileInfo(TextBox1.Text).FullName, ".html", "_files\")
+        GetThePatch = Replace(My.Computer.FileSystem.GetFileInfo(TextBox1.Text).FullName, ".htm", "_files\")
         Dim hasher As MD5 = MD5.Create()
+
+
+        If Not My.Computer.FileSystem.DirectoryExists(GetThePatch) Then
+            MsgBox("路徑不存在!可能非網頁存檔", 0, "錯誤")
+            Exit Sub
+        End If
 
         Me.Enabled = False
 
@@ -62,6 +69,7 @@ Public Class Form1
 
         Dim GJFILE As IO.StreamReader
 
+        Dim FULLstrStart As String = ""
         Dim FULLstrOrg As String = ""
         Dim FULLstr As String = ""
         Dim FULLstrArray() As String
@@ -75,16 +83,20 @@ Public Class Form1
         End Try
 
         Try
-            FULLstrOrg = GJFILE.ReadToEnd
+            FULLstrStart = GJFILE.ReadToEnd
             GJFILE.Close()
         Catch ex As Exception
             MsgBox(ex.Message)
             Exit Sub
         End Try
 
+
         Dim IDX1, IDX2, IDX3, IDX4, IDX5, IDX6 As Integer
+        Dim Rnd1 As New Random
+        Dim SPCode As String = "?" + Hex(Rnd1.Next(16, 512)) + "?:-:!!"
 
         Dim FileTypeS() As String = {"jpg", "jpeg", "png", "webp", "gif", "php"}
+        Dim SplitStr() As String = {" ", SPCode}
         Dim FileTypeMany As Integer = FileTypeS.Count - 1
         Dim FileTypeSCount(FileTypeMany) As Integer
         Dim FileTypeLastUse As String
@@ -92,14 +104,19 @@ Public Class Form1
         Dim CountFormat As String
         Dim FileTmp1, FileTypeUp As String
 
+        FULLstrOrg = FULLstrStart
+        FULLstrOrg = Replace(FULLstrOrg, "http:", SPCode + "http:")
+        FULLstrOrg = Replace(FULLstrOrg, "https:", SPCode + "https:")
+        'FULLstr = FULLstrStart.ToUpper
+
         FULLstr = FULLstrOrg.ToUpper()
         FULLstr = Replace(FULLstr, "\", "/")
         FULLstr = Replace(FULLstr, """", "/")
         FULLstr = Replace(FULLstr, "'", "/")
         FULLstr = Replace(FULLstr, "=", "/")
         FULLstr = Replace(FULLstr, ">", "/")
-        FULLstrArray = FULLstr.Split(" ")
-        FULLstrArrayOrg = FULLstrOrg.Split(" ")
+        FULLstrArray = FULLstr.Split(SplitStr, StringSplitOptions.None)
+        FULLstrArrayOrg = FULLstrOrg.Split(SplitStr, StringSplitOptions.None)
 
         Dim GetBackOne As String = ""
 
@@ -183,5 +200,9 @@ Public Class Form1
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
         Process.Start("Readme.txt")
+    End Sub
+
+    Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
     End Sub
 End Class

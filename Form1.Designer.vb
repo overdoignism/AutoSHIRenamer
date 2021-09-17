@@ -67,11 +67,11 @@ Partial Class Form1
         Me.Label2.AutoSize = True
         Me.Label2.BackColor = System.Drawing.Color.BlanchedAlmond
         Me.Label2.Font = New System.Drawing.Font("微軟正黑體", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(136, Byte))
-        Me.Label2.Location = New System.Drawing.Point(304, 80)
+        Me.Label2.Location = New System.Drawing.Point(279, 80)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(375, 17)
+        Me.Label2.Size = New System.Drawing.Size(400, 17)
         Me.Label2.TabIndex = 3
-        Me.Label2.Text = "Developed by Overdoingism. It's a freeware with MIT License."
+        Me.Label2.Text = "Developed by Overdoingism Lab. It's a freeware with MIT License."
         '
         'Button2
         '
@@ -101,7 +101,7 @@ Partial Class Form1
         Me.LinkLabel1.AutoSize = True
         Me.LinkLabel1.BackColor = System.Drawing.Color.Bisque
         Me.LinkLabel1.Font = New System.Drawing.Font("微軟正黑體", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(136, Byte))
-        Me.LinkLabel1.Location = New System.Drawing.Point(82, 193)
+        Me.LinkLabel1.Location = New System.Drawing.Point(82, 163)
         Me.LinkLabel1.Name = "LinkLabel1"
         Me.LinkLabel1.Size = New System.Drawing.Size(553, 20)
         Me.LinkLabel1.TabIndex = 7
@@ -134,7 +134,7 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 12.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(705, 222)
+        Me.ClientSize = New System.Drawing.Size(705, 197)
         Me.Controls.Add(Me.LinkLabel1)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Button3)
@@ -146,7 +146,7 @@ Partial Class Form1
         Me.Controls.Add(Me.TextBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Name = "Form1"
-        Me.Text = "網頁存檔圖片自動更名器 v0.2"
+        Me.Text = "網頁存檔圖片自動更名器 v0.3"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
