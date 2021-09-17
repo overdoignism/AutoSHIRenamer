@@ -1,4 +1,5 @@
-# AutoSHIRenamer 網頁存檔圖片自動更名器 (Saved web images auto rename tool.)
+# AutoSHIRenamer 網頁存檔圖片自動更名器 (For Windows)  
+(Saved web images auto rename tool, for Windows.)
 
 ＜中文＞
 -------
@@ -20,6 +21,12 @@ By Overdoingism - 做過頭主義。
 ＜３＞網站設計技巧日新月異，本程式非萬能，仍可能有無效的場合；若瀏覽器即無正確存檔，亦更不可能修復，請注意。
 
 ＜４＞本程式設計者不對使用本程式之任何結果負責。
+
+＊版本＊  
+v0.3 適用於更多網站  
+
+＊下載＊
+如果不打算自行編譯，請至 bin\debug 下載 exe 執行擋。
 
 -------
 
@@ -43,3 +50,11 @@ Developed by Visual Studio.NET , overdoingism Lab.  Use MIT License.
 <3> The program is not all-powerful.
 
 <4> Author HAS NO ANY RESPONSIBILITY AND WARRANTY for your using result.
+
+** History **  
+  
+v0.3 Suitable for more kinds of websites.
+
+** Download **  
+  
+If you want download executable file directly, please go to bin\debug and download the exe file.
