@@ -27,7 +27,7 @@ FireFox的子網頁會存在子檔案夾，目前不做處理，如有需要請�
 
 ＊版本＊
 
-v0.3 適用於更多種網站
+v0.4 修正一點BUG
 
 =========================================================================================
 
@@ -55,4 +55,4 @@ The saved of Firefox is in sub-directory, not process now.
 
 ** History **
 
-v0.3 Suitable for more kinds of websites.
+v0.3 Fix little bug.
