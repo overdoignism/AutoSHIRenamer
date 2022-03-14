@@ -31,10 +31,13 @@ Public Class Form1
         End If
 
         Dim ManyHTMLstr As String
-        Dim GetThePatch As String = Replace(My.Computer.FileSystem.GetFileInfo(TextBox1.Text).FullName, ".html", "_files\")
-        GetThePatch = Replace(My.Computer.FileSystem.GetFileInfo(TextBox1.Text).FullName, ".htm", "_files\")
         Dim hasher As MD5 = MD5.Create()
+        Dim GetThePatch As String = My.Computer.FileSystem.GetFileInfo(TextBox1.Text).FullName
 
+        GetThePatch = GetThePatch + "/"
+
+        GetThePatch = Replace(GetThePatch, ".html/", "_files\")
+        GetThePatch = Replace(GetThePatch, ".htm/", "_files\")
 
         If Not My.Computer.FileSystem.DirectoryExists(GetThePatch) Then
             MsgBox("路徑不存在!可能非網頁存檔", 0, "錯誤")

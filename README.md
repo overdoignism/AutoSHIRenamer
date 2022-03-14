@@ -22,10 +22,13 @@ By Overdoingism - 做過頭主義。
 
 ＜４＞本程式設計者不對使用本程式之任何結果負責。
 
-＊版本＊  
+＊版本＊
+
+v0.4 小bug修正
 v0.3 適用於更多網站  
 
-＊下載＊  
+＊下載＊
+
 如果不打算自行編譯，請至 bin\debug 下載 exe 執行擋。
 
 -------
@@ -52,7 +55,9 @@ Developed by Visual Studio.NET , overdoingism Lab.  Use MIT License.
 <4> Author HAS NO ANY RESPONSIBILITY AND WARRANTY for your using result.
 
 ** History **  
-  
+
+v0.4 Little bug fix.
+
 v0.3 Suitable for more kinds of websites.
 
 ** Download **  

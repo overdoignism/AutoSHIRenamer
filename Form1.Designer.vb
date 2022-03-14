@@ -146,7 +146,7 @@ Partial Class Form1
         Me.Controls.Add(Me.TextBox1)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D
         Me.Name = "Form1"
-        Me.Text = "網頁存檔圖片自動更名器 v0.3"
+        Me.Text = "網頁存檔圖片自動更名器 v0.4"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
