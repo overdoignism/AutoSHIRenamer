@@ -25,6 +25,7 @@ By Overdoingism - 做過頭主義。
 ＊版本＊
 
 v0.4 小bug修正
+
 v0.3 適用於更多網站  
 
 ＊下載＊
@@ -56,8 +57,7 @@ Developed by Visual Studio.NET , overdoingism Lab.  Use MIT License.
 
 ** History **  
 
-v0.4 Little bug fix.
-
+v0.4 Little bug fix. 
 v0.3 Suitable for more kinds of websites.
 
 ** Download **  
