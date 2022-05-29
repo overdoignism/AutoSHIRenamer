@@ -198,7 +198,7 @@ Public Class Form1
     End Sub
 
     Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
-        Process.Start("https://lunbanplantman.blogspot.com/2020/08/blog-post_29.html")
+        Process.Start("https://ihavenomatk.blogspot.com/2020/10/blog-post.html")
     End Sub
 
     Private Sub Button3_Click(sender As Object, e As EventArgs) Handles Button3.Click
